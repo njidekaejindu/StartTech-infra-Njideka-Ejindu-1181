@@ -1,5 +1,12 @@
 terraform {
   required_version = ">= 1.5.0"
+  backend "s3" {
+    bucket         = "starttech-tfstate-325298450975"
+    key            = "starttech/dev/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "starttech-terraform-locks"
+    encrypt        = true
+  }
 
   required_providers {
     aws = {
