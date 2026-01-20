@@ -12,3 +12,8 @@ crash.*.log
 # Editor folders
 .vscode/
 .idea/
+
+*.txt
+console*
+.terraform
+terraform.tfstate*
